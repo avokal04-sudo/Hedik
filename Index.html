@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graduation Ceremony 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a3a4a 100%);
+            padding: 20px;
+        }
+
+        .card {
+            max-width: 800px;
+            width: 100%;
+            background: #fbf7f0;
+            border-radius: 40px 40px 20px 20px;
+            padding: 50px 40px 45px;
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        /* Gold decorative line */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, #d4af37, #f9e57c, #d4af37);
+        }
+
+        .mortarboard {
+            font-size: 72px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #0b1a2e;
+            margin: 10px 0 5px;
+        }
+
+        .subhead {
+            font-size: 1.2rem;
+            color: #5a4d3c;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            border-top: 2px solid #d4af37;
+            border-bottom: 2px solid #d4af37;
+            display: inline-block;
+            padding: 6px 20px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .date-place {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px 50px;
+            margin: 20px 0 25px;
+            font-size: 1.1rem;
+            color: #2c3e4e;
+        }
+
+        .date-place span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .date-place i {
+            font-size: 1.5rem;
+        }
+
+        .divider {
+            width: 80px;
+            height: 3px;
+            background: #d4af37;
+            margin: 15px auto 20px;
+            border-radius: 10px;
+        }
+
+        p.message {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #2d3e4f;
+            max-width: 550px;
+            margin: 0 auto 30px;
+            font-style: italic;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #0b1a2e;
+            color: #fbf7f0;
+            padding: 16px 48px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 60px;
+            letter-spacing: 1px;
+            transition: 0.3s ease;
+            border: 2px solid #d4af37;
+            box-shadow: 0 6px 0 #d4af37;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #d4af37;
+            color: #0b1a2e;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 0 #b8962e;
+        }
+
+        .btn:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 #b8962e;
+        }
+
+        .footer {
+            margin-top: 35px;
+            font-size: 0.9rem;
+            color: #7e8d9b;
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Confetti particles (pure CSS) */
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            opacity: 0.7;
+            border-radius: 2px;
+            animation: fall linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-20px) rotate(0deg); opacity: 0.8; }
+            100% { transform: translateY(700px) rotate(720deg); opacity: 0; }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .card { padding: 30px 20px; }
+            h1 { font-size: 2.2rem; }
+            .subhead { font-size: 0.9rem; letter-spacing: 4px; }
+            .date-place { flex-direction: column; gap: 10px; }
+            .btn { padding: 14px 30px; font-size: 1rem; }
+            .mortarboard { font-size: 56px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <!-- Decorative confetti (generated by JS) -->
+        <div id="confetti-container"></div>
+
+        <span class="mortarboard">🎓</span>
+        <h1>Class of 2026</h1>
+        <div class="subhead">Graduation Ceremony</div>
+
+        <div class="date-place">
+            <span>📅 Saturday, June 13, 2026</span>
+            <span>📍 Main Auditorium · 10:00 AM</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="message">
+            “The tassel was worth the hassle.”<br />
+            Join us as we celebrate this milestone with pride, joy, and a bright future ahead.
+        </p>
+
+        <a href="#" class="btn">RSVP Now</a>
+
+        <div class="footer">
+            🎉 Live stream available at <a href="#">grad.2026.live</a>
+        </div>
+    </div>
+
+    <script>
+        // Generate confetti pieces
+        (function createConfetti() {
+            const container = document.getElementById('confetti-container');
+            const colors = ['#d4af37', '#f9e57c', '#0b1a2e', '#c0392b', '#2e86c1', '#27ae60', '#f39c12'];
+
+            for (let i = 0; i < 40; i++) {
+                const piece = document.createElement('div');
+                piece.className = 'confetti-piece';
+                const size = Math.random() * 8 + 4;
+                piece.style.width = size + 'px';
+                piece.style.height = size * 0.6 + 'px';
+                piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+                piece.style.left = Math.random() * 100 + '%';
+                piece.style.top = '-10px';
+                piece.style.animationDuration = (Math.random() * 6 + 4) + 's';
+                piece.style.animationDelay = (Math.random() * 8) + 's';
+                piece.style.transform = 'rotate(' + (Math.random() * 360) + 'deg)';
+                piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+                container.appendChild(piece);
+            }
+        })();
+    </script>
+
+</body>
+</html>
